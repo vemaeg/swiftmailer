@@ -1,6 +1,9 @@
 <?php
 
-return PhpCsFixer\Config::create()
+$finder = PhpCsFixer\Finder::create()
+    ->in(__DIR__);
+
+return (new PhpCsFixer\Config())
     ->setRules([
         '@Symfony' => true,
         '@Symfony:risky' => true,
@@ -17,5 +20,5 @@ return PhpCsFixer\Config::create()
         'fopen_flags' => false,
     ])
     ->setRiskyAllowed(true)
-    ->setFinder(PhpCsFixer\Finder::create()->in(__DIR__))
+    ->setFinder($finder)
 ;
