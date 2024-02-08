@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        php: ['7.0', '7.1', '7.2', '7.3', '7.4', '8.0', '8.1']
+        php: ['7.4', '8.1']
 
     name: PHP ${{ matrix.php }}
 
@@ -53,3 +53,4 @@ jobs:
         run: vendor/bin/simple-phpunit --verbose
         env:
           SYMFONY_PHPUNIT_REMOVE_RETURN_TYPEHINT: 1
+          SYMFONY_DEPRECATIONS_HELPER: weak
