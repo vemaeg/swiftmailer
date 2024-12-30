@@ -29,6 +29,12 @@ class Swift_Transport_Esmtp_Auth_NTLMAuthenticatorTest extends SwiftMailerTestCa
 
     public function testLMv1Generator()
     {
+        if (true == getenv('GITHUB_ACTIONS')) {
+            $this->markTestSkipped(
+                'Cannot run test on CI due to legacy openssl ciphers'
+            );
+        }
+
         $password = 'test1234';
         $challenge = 'b019d38bad875c9d';
         $lmv1 = '1879f60127f8a877022132ec221bcbf3ca016a9f76095606';
