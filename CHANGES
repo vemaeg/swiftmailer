@@ -15,6 +15,7 @@ Upcoming
 * Fix deprecations for PHP 8.5 compatibility
 * Update CI pipeline to Ubuntu 22.04
 * Skip test incompatible with newer OpenSSL
+* Replace dockage/mailcatcher with axllent/mailpit for CI tests
 
 6.4.1 (2025-05-16)
 ------------------
