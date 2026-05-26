@@ -16,6 +16,7 @@ Upcoming
 * Update CI pipeline to Ubuntu 22.04
 * Skip test incompatible with newer OpenSSL
 * Replace dockage/mailcatcher with axllent/mailpit for CI tests
+* Pin CI runner from ubuntu-latest to ubuntu-24.04
 
 6.4.1 (2025-05-16)
 ------------------
